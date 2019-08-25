@@ -15,7 +15,9 @@ Starter stub for future React projects.
 - `npm run webpack` to build and bundle the project into a `build` directory (not provided here)
 
 ## Getting started
-1. Fork this repository
-2. Run `npm i` to install dependencies
-3. Run `npm run dev` and you are all set!
-
+1. Clone this repository
+2. Create a repository in GitHub
+3. Run `git remote add origin https://github.com/<<github-username>>/<<repo-name>>.git`
+4. Run `git push -u origin master` to push to your new repository
+5. Run `npm i` to install dependencies
+6. Run `npm run dev` and you are all set!
