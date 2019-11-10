@@ -7,7 +7,9 @@
     "dev": "babel-node ./node_modules/webpack-dev-server/bin/webpack-dev-server --open",
     "lint": "eslint src/**/*.js src/**/*.jsx",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "webpack": "babel-node ./node_modules/webpack/bin/webpack"
+    "webpack": "babel-node ./node_modules/webpack/bin/webpack",
+    "storybook": "start-storybook -p 6006",
+    "build-storybook": "build-storybook"
   },
   "repository": {
     "type": "git",
@@ -25,6 +27,11 @@
     "@babel/plugin-proposal-class-properties": "^7.5.0",
     "@babel/preset-env": "^7.5.4",
     "@babel/preset-react": "^7.0.0",
+    "@storybook/addon-actions": "^5.2.6",
+    "@storybook/addon-knobs": "^5.2.6",
+    "@storybook/addon-links": "^5.2.6",
+    "@storybook/addons": "^5.2.6",
+    "@storybook/react": "^5.2.6",
     "babel-loader": "^8.0.6",
     "eslint": "^6.0.1",
     "eslint-config-standard": "^13.0.1",
@@ -41,6 +48,7 @@
     "webpack-dev-server": "^3.7.2"
   },
   "dependencies": {
-    "prop-types": "^15.7.2"
+    "prop-types": "^15.7.2",
+    "styled-components": "^4.4.1"
   }
 }
