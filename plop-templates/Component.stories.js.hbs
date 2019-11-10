@@ -1,0 +1,14 @@
+import React from 'react'
+import { storiesOf } from '@storybook/react'
+import { withKnobs, text } from '@storybook/addon-knobs'
+import {{pascalCase name}} from '.'
+
+const stories = storiesOf('{{pascalCase name}}', module)
+stories.addDecorator(withKnobs)
+
+stories
+    .add('Default', () => (
+        <{{pascalCase name}}>
+            {text('Content', 'Hello World')}
+        </{{pascalCase name}}>
+    ))
