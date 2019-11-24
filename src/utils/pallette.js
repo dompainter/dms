@@ -7,11 +7,11 @@ const green = '#00BD9D'
 const blue = '#20A4F3'
 
 export {
-    black,
-    blue,
-    green,
-    midnight,
-    porcelain,
-    red,
-    white
+  black,
+  blue,
+  green,
+  midnight,
+  porcelain,
+  red,
+  white
 }

@@ -1,16 +1,37 @@
 import React from 'react'
 import propTypes from 'prop-types'
+import styled from 'styled-components'
+import { blue, green } from '../../utils/pallette'
+import getFont from '../../utils/font'
 
-const Navigationitem = ({ name }) => {
+const Link = styled.a`
+  text-decoration: none;
+  color: ${blue};
+  font: ${getFont()};
+  transition: border-color 0.5s ease;
+  border-color: transparent;
+  font-weight: ${({ active }) => active ? 600 : 'normal'};
+
+  &:hover {
+    cursor: pointer;
+    border-bottom: 1px solid ${green};
+  }
+
+`
+
+const NavigationItem = ({ active, isExternal, children, href }) => {
   return (
-    <div>
-      Navigationitem
-    </div>
+    <Link active={active} target={isExternal ? '_blank' : undefined} href={href}>
+      {children}
+    </Link>
   )
 }
 
-Navigationitem.propTypes = {
-  name: propTypes.string
+NavigationItem.propTypes = {
+  active: propTypes.bool,
+  isExternal: propTypes.bool,
+  children: propTypes.node,
+  href: propTypes.string
 }
 
-export default Navigationitem
+export default NavigationItem

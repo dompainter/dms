@@ -1,30 +1,34 @@
 import React from 'react'
 import propTypes from 'prop-types'
 import styled from 'styled-components'
+import { blue, black, white } from '../../utils/pallette'
+import getFont from '../../utils/font'
 
 const StyledButton = styled.button`
-    background-color: #FFF;
-    color: #000;
-    border: 1px solid #000;
+    background-color: ${white};
+    color: ${blue};
+    border: 1px solid ${black};
     border-radius: 5px;
     cursor: pointer;
     outline: 0;
+    font: ${getFont()};
+    padding: 10px;
 
     &:hover {
-        background-color: #000;
-        color: #FFF;
+        background-color: ${black};
+        color: ${white};
     }
 `
 
 const Button = ({ children, onClick }) => (
-    <StyledButton onClick={onClick}>
-        {children}
-    </StyledButton>
+  <StyledButton onClick={onClick}>
+    {children}
+  </StyledButton>
 )
 
 Button.propTypes = {
-    children: propTypes.node,
-    onClick: propTypes.func
+  children: propTypes.node,
+  onClick: propTypes.func
 }
 
 export default Button
