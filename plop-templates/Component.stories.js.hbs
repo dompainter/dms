@@ -7,8 +7,8 @@ const stories = storiesOf('{{pascalCase name}}', module)
 stories.addDecorator(withKnobs)
 
 stories
-    .add('Default', () => (
-        <{{pascalCase name}}>
-            {text('Content', 'Hello World')}
-        </{{pascalCase name}}>
-    ))
+  .add('Default', () => (
+      <{{pascalCase name}}>
+          {text('Content', 'Hello World')}
+      </{{pascalCase name}}>
+  ))
