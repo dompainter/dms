@@ -11,7 +11,7 @@ const Link = styled.a`
   transition: border-color 0.5s ease;
   border-color: transparent;
   font-weight: ${({ active }) => active ? 600 : 'normal'};
-
+  
   &:hover {
     cursor: pointer;
     border-bottom: 1px solid ${green};
