@@ -2,16 +2,23 @@ import React from 'react'
 import propTypes from 'prop-types'
 import styled from 'styled-components'
 import { midnight, white } from '../../utils/pallette'
+import getFont from '../../utils/font'
 
 const Container = styled.div`
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+`
+
+const BoxContainer = styled.div`
   display: inline-block;
   vertical-align: middle;
+  margin: 5px 25px 5px 5px;
 `
 
 const HiddenCheckbox = styled.input.attrs({ type: 'checkbox' })`
   border: 0;
   clip: rect(0 0 0 0);
-  clippath: inset(50%);
   height: 1px;
   margin: -1px;
   overflow: hidden;
@@ -43,23 +50,33 @@ const Box = styled.div`
     visibility: ${({ checked }) => checked ? 'visible' : 'hidden'}
   }
 `
-const Checkbox = ({ onChange, checked }) => {
-  console.log('​Checkbox -> checked', checked)
+
+const Label = styled.span`
+  font: ${getFont()};
+  display: inline;
+  padding: 0 5px;
+`
+
+const Checkbox = ({ onChange, checked, label, ...htmlAttributes }) => {
   return (
-    <Container onClick={onChange}>
-      <HiddenCheckbox checked={checked} onChange={onChange} />
-      <Box checked={checked}>
-        <Icon viewBox="2 -3 20 24">
-          <polyline points="20 6 9 17 4 12" />
-        </Icon>
-      </Box>
+    <Container>
+      <BoxContainer {...htmlAttributes} onClick={onChange}>
+        <HiddenCheckbox checked={checked} onChange={onChange} />
+        <Box checked={checked}>
+          <Icon viewBox="2 -3 20 24">
+            <polyline points="20 6 9 17 4 12" />
+          </Icon>
+        </Box>
+      </BoxContainer>
+      <Label>{label}</Label>
     </Container>
   )
 }
 
 Checkbox.propTypes = {
   onChange: propTypes.func,
-  checked: propTypes.bool
+  checked: propTypes.bool,
+  label: propTypes.string
 }
 
 export default Checkbox

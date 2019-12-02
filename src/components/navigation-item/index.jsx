@@ -19,9 +19,13 @@ const Link = styled.a`
 
 `
 
-const NavigationItem = ({ active, isExternal, children, href }) => {
+const NavigationItem = ({ active, isExternal, children, href, ...htmlAttributes }) => {
   return (
-    <Link active={active} target={isExternal ? '_blank' : undefined} href={href}>
+    <Link
+      {...htmlAttributes}
+      active={active}
+      target={isExternal ? '_blank' : undefined}
+      href={href}>
       {children}
     </Link>
   )

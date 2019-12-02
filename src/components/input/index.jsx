@@ -8,6 +8,7 @@ const Container = styled.div`
   display: flex;
   flex-direction: column;
   width: 100%;
+  padding: 5px;
 `
 
 const TextInput = styled.input`

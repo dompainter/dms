@@ -1,7 +1,7 @@
 import React from 'react'
 import { action } from '@storybook/addon-actions'
 import { storiesOf } from '@storybook/react'
-import { withKnobs, boolean } from '@storybook/addon-knobs'
+import { withKnobs, boolean, text } from '@storybook/addon-knobs'
 import CenteredWrapper from '../../storybook/components/centered-wrapper'
 import Checkbox from '.'
 
@@ -14,6 +14,7 @@ stories
       <Checkbox
         onChange={action('onChange')}
         checked={boolean('Checked', false)}
+        label={text('Label', 'Checkbox Label')}
       />
     </CenteredWrapper>
   ))

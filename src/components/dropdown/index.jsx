@@ -6,7 +6,7 @@ import getFont from '../../utils/font'
 
 const Select = styled.select`
   font: ${getFont()};
-  padding: 5px 10px;
+  margin: 5px 10px;
   color: ${white};
   outline: none;
   border: none;
@@ -16,9 +16,9 @@ const Select = styled.select`
   width: 100%;
 `
 
-const Dropdown = ({ options, onChange }) => {
+const Dropdown = ({ options, onChange, ...htmlAttributes }) => {
   return (
-    <Select onChange={e => onChange(e.target.value)}>
+    <Select {...htmlAttributes} onChange={e => onChange(e.target.value)}>
       {options.map(({ value, label }) =>
         <option key={`option-${value}`} value={value}>{label}</option>
       )}

@@ -8,8 +8,8 @@ const CenteredDiv = styled.div`
   padding: 50px;
 `
 
-const CenteredWrapper = ({ children }) => (
-  <CenteredDiv>
+const CenteredWrapper = ({ children, ...htmlAttributes }) => (
+  <CenteredDiv {...htmlAttributes}>
     {children}
   </CenteredDiv>
 )
