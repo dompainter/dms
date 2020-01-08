@@ -2,7 +2,6 @@ import React from 'react'
 import propTypes from 'prop-types'
 import styled from 'styled-components'
 import getFont from '../../utils/font'
-import { white } from '../../utils/pallette'
 
 const Container = styled.div`
   display: flex;

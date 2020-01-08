@@ -27,21 +27,19 @@ const ErrorMessage = styled.p`
   color: ${red};
 `
 
-const Input = ({ placeholder, onChange, defaultValue, type, errorMessage }) => {
-  return (
-    <Container>
-      <TextInput
-        placeholder={placeholder}
-        onChange={e => onChange(e.target.value)}
-        defaultValue={defaultValue}
-        type={type}
-      />
-      {errorMessage && (
-        <ErrorMessage>{errorMessage}</ErrorMessage>
-      )}
-    </Container>
-  )
-}
+const Input = ({ placeholder, onChange, defaultValue, type, errorMessage }) => (
+  <Container>
+    <TextInput
+      placeholder={placeholder}
+      onChange={e => onChange(e.target.value)}
+      defaultValue={defaultValue}
+      type={type}
+    />
+    {errorMessage && (
+      <ErrorMessage>{errorMessage}</ErrorMessage>
+    )}
+  </Container>
+)
 
 Input.propTypes = {
   placeholder: propTypes.string,
