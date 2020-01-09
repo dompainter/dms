@@ -1,6 +1,6 @@
 # DMS
 
-Starter stub for future React projects.
+The purpose of this repository is to provide a component library that is demonstrated through storybook and tested using jest. I have added additional libraries (such as webpack and babel) in case this turns into more than a component library further down the line.
 
 ## Stub contains
 - React
@@ -8,11 +8,16 @@ Starter stub for future React projects.
 - Webpack
 - Babel
 - Live updating
+- Storybook
+- Jest and Enzyme testing
 
 ## Scripts
 - `npm run dev` to run the project at `localhost:8080`
 - `npm run lint` to lint the project (ESLint config file provided)
 - `npm run webpack` to build and bundle the project into a `build` directory (not provided here)
+- `npm run storybook` to run storybook at `localhost:6006`
+- `npm run build-storybook` to build a storybook bundle
+- `npm run test` to execute all test files using jest
 
 ## Getting started
 1. Clone this repository
