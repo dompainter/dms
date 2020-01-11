@@ -13,14 +13,14 @@ const Container = styled.div`
 `
 
 // eslint-disable-next-line react/prop-types
-const getFieldComponent = ({ input, ...fieldProps }) => {
+const getFieldComponent = ({ input, ...fieldProps }, index) => {
   switch (input) {
   case 'text':
-    return <Input {...fieldProps} />
+    return <Input key={index} {...fieldProps} />
   case 'select':
-    return <Dropdown {...fieldProps} />
+    return <Dropdown key={index} {...fieldProps} />
   case 'checkbox':
-    return <Checkbox {...fieldProps} />
+    return <Checkbox key={index} {...fieldProps} />
   default:
     return null
   }
@@ -29,8 +29,8 @@ const getFieldComponent = ({ input, ...fieldProps }) => {
 const Form = ({ fields, ...htmlAttributes }) => {
   return (
     <Container {...htmlAttributes}>
-      {fields.map(field =>
-        getFieldComponent(field)
+      {fields.map((field, index) =>
+        getFieldComponent(field, index)
       )}
     </Container>
   )
