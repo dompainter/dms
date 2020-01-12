@@ -32,7 +32,6 @@ const FooterItem = styled.a`
 `
 
 const Footer = ({ columns }) => {
-  console.log('​Footer -> columns', columns)
   return (
     <Container>
       {columns.map(({ header, items }, index) =>

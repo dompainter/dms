@@ -2,7 +2,6 @@ import React from 'react'
 import { storiesOf } from '@storybook/react'
 import { withKnobs } from '@storybook/addon-knobs'
 import styled from 'styled-components'
-import { black } from '../../utils/pallette'
 import Footer from '.'
 
 const Container = styled.div`

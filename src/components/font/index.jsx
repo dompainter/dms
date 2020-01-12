@@ -2,6 +2,7 @@ import React from 'react'
 import propTypes from 'prop-types'
 import styled from 'styled-components'
 import getFont from '../../utils/font'
+import CenteredWrapper from '../../storybook/components/centered-wrapper'
 
 const StyledP = styled.p`
   font: ${props => props.font};
@@ -9,25 +10,45 @@ const StyledP = styled.p`
 
 const Font = () => {
   const fontDemos = [{
-    title: 'Heading',
+    title: 'Asap - Heading',
     fontFamily: 'Asap, sans-serif',
     size: 32,
     weight: 600
   }, {
-    title: 'Heading',
+    title: 'Asap - Subheading',
     fontFamily: 'Asap, sans-serif',
+    size: 26,
+    weight: 600
+  }, {
+    title: 'Asap - Paragraph',
+    fontFamily: 'Asap, sans-serif',
+    size: 16,
+    weight: 'normal'
+  }, {
+    title: 'Montserrat - Heading',
+    fontFamily: 'Montserrat, sans-serif',
     size: 32,
+    weight: 600
+  }, {
+    title: 'Montserrat - Subheading',
+    fontFamily: 'Montserrat, sans-serif',
+    size: 26,
+    weight: 600
+  }, {
+    title: 'Montserrat - Paragraph',
+    fontFamily: 'Montserrat, sans-serif',
+    size: 16,
     weight: 'normal'
   }]
 
   return (
-    <>
-        {fontDemos.map((demo, index) => (
-          <StyledP key={index} font={getFont({ ...demo })}>
-            {demo.title}
-          </StyledP>
-        ))}
-    </>
+    <CenteredWrapper>
+      {fontDemos.map((demo, index) => (
+        <StyledP key={index} font={getFont({ ...demo })}>
+          {demo.title}
+        </StyledP>
+      ))}
+    </CenteredWrapper>
   )
 }
 
