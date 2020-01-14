@@ -1,17 +1,18 @@
-# DMS
+# DMS 🚧
 
 The purpose of this repository is to provide a component library that is demonstrated through storybook and tested using jest. I have added additional libraries (such as webpack and babel) in case this turns into more than a component library further down the line.
 
-## Stub contains
-- React
-- ESLint
-- Webpack
-- Babel
-- Live updating
-- Storybook
-- Jest and Enzyme testing
+## Contains 🎁
+- React ⚛
+- ESLint 🕵️‍♂️
+- Webpack 📦
+- Babel ⚙️
+- Live updating ♻️
+- Storybook 📚
+- Jest and Enzyme testing 🧪
 
-## Scripts
+## Scripts 🖌
+
 - `npm run dev` to run the project at `localhost:8080`
 - `npm run lint` to lint the project (ESLint config file provided)
 - `npm run webpack` to build and bundle the project into a `build` directory (not provided here)
@@ -19,7 +20,8 @@ The purpose of this repository is to provide a component library that is demonst
 - `npm run build-storybook` to build a storybook bundle
 - `npm run test` to execute all test files using jest
 
-## Getting started
+## Getting started 🏁
+
 1. Clone this repository
 2. Create a repository in GitHub
 3. Run `git remote add origin https://github.com/<<github-username>>/<<repo-name>>.git`
