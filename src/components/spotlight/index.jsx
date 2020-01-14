@@ -4,14 +4,6 @@ import styled from 'styled-components'
 import * as pallette from '../../utils/pallette'
 
 const Circle = styled.div`
-  /* border-radius: 50%;
-  width: ${({ dimensions }) => `${dimensions}px`};
-  height: ${({ dimensions }) => `${dimensions}px`};
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  margin: ${({ dimensions }) => `-${dimensions / 2}px 0px 0px -${dimensions / 2}px`}; */
-
   background-size: cover;
   background-image: ${({ imageUrl }) => `url(${imageUrl});`};
   top: 7.5%;
