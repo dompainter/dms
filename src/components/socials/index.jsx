@@ -13,6 +13,8 @@ const IconGroup = styled.div`
 `
 
 const Icon = styled.a`
+  &&& {
+
   font-size: 25px;
   color: ${({ backgroundColour }) => `${backgroundColour}`};
   transition: all 0.2s ease-in-out;
@@ -20,6 +22,7 @@ const Icon = styled.a`
 
   &:hover {
     transform: scale(1.1);
+  }
   }
 `
 
