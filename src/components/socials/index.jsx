@@ -3,7 +3,6 @@ import propTypes from 'prop-types'
 import styled from 'styled-components'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faTwitter, faFacebookF, faInstagram } from '@fortawesome/free-brands-svg-icons'
-import { black } from '../../utils/pallette'
 
 const IconGroup = styled.div`
   display: flex;
@@ -14,15 +13,14 @@ const IconGroup = styled.div`
 
 const Icon = styled.a`
   &&& {
+    font-size: 25px;
+    color: ${({ backgroundColour }) => `${backgroundColour}`};
+    transition: all 0.2s ease-in-out;
+    text-decoration: none;
 
-  font-size: 25px;
-  color: ${({ backgroundColour }) => `${backgroundColour}`};
-  transition: all 0.2s ease-in-out;
-  text-decoration: none;
-
-  &:hover {
-    transform: scale(1.1);
-  }
+    &:hover {
+      transform: scale(1.1);
+    }
   }
 `
 
@@ -36,7 +34,6 @@ const Socials = ({ backgroundColour, twitterUrl, instagramUrl, facebookUrl, ...h
           href={instagramUrl}
           backgroundColour={backgroundColour}
         >
-          <i className="fab fa-instagram"></i>
           <FontAwesomeIcon icon={faInstagram} />
         </Icon>
       )}
@@ -48,7 +45,6 @@ const Socials = ({ backgroundColour, twitterUrl, instagramUrl, facebookUrl, ...h
           backgroundColour={backgroundColour}
         >
           <FontAwesomeIcon icon={faFacebookF} />
-
         </Icon>
       )}
       {twitterUrl && (
