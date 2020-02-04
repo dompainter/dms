@@ -2,8 +2,8 @@ import React, { useState } from 'react'
 import propTypes from 'prop-types'
 import styled from 'styled-components'
 import useInterval from '../../hooks/use-interval'
-import { black, porcelain, green } from '../../utils/pallette'
 import Text from '../text'
+import Dots from '../dots'
 
 const SlidesContainer = styled.div`
   width: 60%;
@@ -21,34 +21,6 @@ const Slide = styled.div`
   align-items: center;
   justify-content: center;
   overflow: hidden;
-`
-
-const DotContainer = styled.div`
-  display: flex;
-  justify-content: center;
-`
-
-const Dot = styled.span`
-  height: 20px;
-  width: 20px;
-  margin: 0 3px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  cursor: pointer;
-
-  &:before {
-    content: "";
-    width: 6px;
-    height: 6px;
-    background-color: ${({ isActive }) => isActive ? black : green};
-    border-radius: 50%;
-    transition: background-color 0.3s ease;
-  }
-
-  &:hover:before {
-    background-color: ${porcelain};
-  }
 `
 
 const TextSlider = ({ slides, isCentered }) => {
@@ -70,15 +42,7 @@ const TextSlider = ({ slides, isCentered }) => {
       <Slide>
         <Text>{slides[activeSlideIndex].text}</Text>
       </Slide>
-      <DotContainer>
-        {slides.map((_, index) =>
-          <Dot
-            key={index}
-            isActive={index === activeSlideIndex}
-            onClick={() => handleSetClick(index)}
-          />
-        )}
-      </DotContainer>
+      <Dots numberOfDots={slides.length} onDotClick={handleSetClick} activeDotIndex={activeSlideIndex} />
     </SlidesContainer>
   )
 }
