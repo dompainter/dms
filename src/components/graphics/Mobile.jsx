@@ -58,20 +58,20 @@ const StyledSvg = styled.svg`
   }
 
   #chat-1 {
-    animation: scale-message 0.5s ease-in;
+    animation: scale-message 0.5s ease-in forwards;
     transform-origin: bottom left;
     transform-box: fill-box;
   }
 
   #chat-2 {
-    animation: scale-message 0.5s ease-in;
+    animation: scale-message 0.5s ease-in forwards;
     transform-origin: bottom right;
     transform-box: fill-box;
     animation-delay: 0.6s;
   }
 
   #chat-3 {
-    animation: scale-message 0.5s ease-in;
+    animation: scale-message 0.5s ease-in forwards;
     animation-delay: 1.2s;
     transform-origin: bottom left;
     transform-box: fill-box;
