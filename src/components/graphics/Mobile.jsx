@@ -56,6 +56,38 @@ const StyledSvg = styled.svg`
       transform: translateX(10%) rotateZ(10deg);
     }
   }
+
+  #chat-1 {
+    animation: scale-message 0.5s ease-in;
+    transform-origin: bottom left;
+    transform-box: fill-box;
+  }
+
+  #chat-2 {
+    animation: scale-message 0.5s ease-in;
+    transform-origin: bottom right;
+    transform-box: fill-box;
+    animation-delay: 0.6s;
+  }
+
+  #chat-3 {
+    animation: scale-message 0.5s ease-in;
+    animation-delay: 1.2s;
+    transform-origin: bottom left;
+    transform-box: fill-box;
+  }
+
+  @keyframes scale-message {
+    from {
+      transform: translateX(40%) scale(0);
+      opacity: 0;
+    }
+
+    to {
+      transform: translateX(0%) scale(1);
+      opacity: 1;
+    }
+  }
 `
 
 export default Mobile
