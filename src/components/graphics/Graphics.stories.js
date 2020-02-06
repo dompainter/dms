@@ -6,8 +6,13 @@ import Graphics from '.'
 const stories = storiesOf('Graphics', module)
 
 stories
-  .add('Mobile', () => (
+  .add('Mobile Messages', () => (
     <CenteredWrapper>
       <Graphics name="mobile" />
+    </CenteredWrapper>
+  ))
+  .add('Mobile Trees', () => (
+    <CenteredWrapper>
+      <Graphics name="mobile-trees" />
     </CenteredWrapper>
   ))
