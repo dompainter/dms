@@ -14,7 +14,7 @@ const Container = styled.div`
 `
 
 const CarouselContainer = styled.div`
-  width: 650px;
+  width: 100%;
   height: 350px;
   position: relative;
   overflow: hidden;
@@ -86,7 +86,7 @@ const Controls = styled.div`
 
 const Carousel = ({ slides }) => {
   const [activeIndex, setActiveIndex] = useState(0)
-  const [delay, setDelay] = useState(6000)
+  const [delay, setDelay] = useState(3000)
   const [isPaused, setIsPaused] = useState(false)
 
   useInterval(() => {
@@ -97,7 +97,7 @@ const Carousel = ({ slides }) => {
     if (isPaused) {
       setDelay(null)
     } else {
-      setDelay(6000)
+      setDelay(3000)
     }
   }, [isPaused])
 
@@ -111,13 +111,13 @@ const Carousel = ({ slides }) => {
 
     setActiveIndex(nextIndex % slides.length)
 
-    setDelay(6000) // Set up interval again once new slide has been set
+    setDelay(3000) // Set up interval again once new slide has been set
   }
 
   const handleDotClick = index => {
     setDelay(null) // Setting delay to null clears interval in useInterval hook
     setActiveIndex(index)
-    setDelay(6000) // Set up interval again once new slide has been set
+    setDelay(3000) // Set up interval again once new slide has been set
   }
 
   return (
